@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function presionoClick(){
+            console.log("CLICK")
+        }
+
+        function DobleClick(){
+            console.log("Doble Click")
+        }
+
+        function cambio(){
+            console.log("Input cambio")
+            console.log(document.querySelector('#combo').value)
+        }
+        function tecla(mensaje){
+            console.log(mensaje)
+        }
+        function mensaje(s){
+            console.log(s)
+        }
+    </script>
+</head>
+<body onmousemove="mensaje('move')" onload="alert('Se termino de cargar')">
+    <button onclick="presionoClick()">click</button>
+    <button ondblclick="DobleClick()">Doble click</button>
+    <input type="text" onchange="cambio()" />
+    <select id="combo" onchange="cambio()">
+        <option value="1">opcion 1</option>
+        <option value="2">opcion 2</option>
+        <option value="3">opcion 3</option>
+        <option value="4">opcion 4</option>
+    </select>
+    <input type="text" onselect="mensaje('select')" onkeyup="tecla('KeyUp')" onkeypress="tecla('KepPress')" onkeydown="tecla('KeyDown')" />
+    <button onmousedown="mensaje('down')" onmouseup="mensaje('up')" onmouseover="mensaje('over')" onmouseout="mensaje('out')">boton</button>
+</body>
+</html>
