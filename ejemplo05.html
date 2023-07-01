@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Estudiante.js"></script>
+    <script>
+        let lista = []
+        lista.push(new Estudiante("Denny", "Herrera", 32))
+        lista.push(new Estudiante("Alexis", "Marin", 32))
+        lista.push(new Estudiante("Diego", "Herrera", 31));
+        lista.push(new Estudiante("Roberto", "Marroquín", 29));        
+        lista.push(new Estudiante("Miguelina", "Villatoro", 25));
+        lista.push(new Estudiante("Carlos", "Castro", 28));
+        lista.push(new Estudiante("jose Luis", "Arteaaga", 23));
+        lista.push(new Estudiante("Ivan" ,"Argueta",19));
+        
+        lista[0].apellido = "Marin"
+        console.log(lista[0].apellido)
+
+        let objeto = new Estudiante("Denny", "Herrera", 32)
+        objeto.apellido = "Marin"
+        objeto.setEdad(15)
+        objeto.setEdad(-40)
+        console.log(objeto)
+        console.log(objeto.apellido)
+        Estudiante.funcion()
+
+        console.log(Math.pow(2,4))
+
+        //console.log(lista)
+        for(let item of lista){
+            item.mostrar()
+            console.log(item.nombre)
+        }
+
+        /*
+        for(let i = 0; i < lista.length; i++){
+            lista[i].mostrar()
+            //console.log(lista[i].nombre)
+        }*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
